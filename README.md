@@ -2,7 +2,13 @@
 
 This Example Spring Boot Framework for deploy to Azure Spring Cloud + Unitest with Mockito
 
-Use Spring Boot framework ``Version 7.2.3 Snapshot`` and dependencies following
+## Why Spring?
+
+Spring makes programming Java quicker, easier, and safer for everybody. Spring’s focus on speed, simplicity, and productivity has made it the world's most popular Java framework.
+
+<img src="https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e1975.svg" alt="Spring" width="200px">
+
+Use Spring Boot framework ``Version 7.2.3 Snapshot`` on ``Java version 8`` and ``dependencies`` following
 
 - spring-boot-starter-actuator
 - spring-boot-starter-web
