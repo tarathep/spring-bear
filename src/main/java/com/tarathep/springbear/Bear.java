@@ -1,7 +1,17 @@
 package com.tarathep.springbear;
 
 public class Bear {
-    public String roar(){
-        return "Hello";
+    String sound;
+
+    public Bear(String sound){
+        this.sound = sound;
+    }
+
+    public void setSound(String sound){
+        this.sound = sound;
+    }
+
+    public String getSound(){
+        return this.sound;
     }
 }

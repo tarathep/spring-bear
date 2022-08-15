@@ -14,18 +14,36 @@ import org.mockito.junit.jupiter.MockitoExtension;
 @ExtendWith(MockitoExtension.class)
 public class BearServiceTest {
     @Mock
-    Bear bear;
+    BearRepository bearRepository;
 
     @InjectMocks
     BearService bearService;
 
     @Test
-    public void testItShoudReturnHelloFromBear(){
-        when(bear.roar()).thenReturn("Grrrrr!");
+    public void testItShoudReturnSayFromBearTypeA(){
 
-        String actual = bearService.say();
-        assertEquals("Grrrrr!", actual);
+        when(bearRepository.sound(100)).thenReturn("xxx!");
 
-        verify(bear,times(1)).roar();
+        String actual = bearService.say("A");
+        assertEquals("xxx!", actual);
+
+        verify(bearRepository,times(1)).sound(100);
+    }
+
+    @Test
+    public void testItShoudReturnSayFromBearTypeB(){
+
+        when(bearRepository.sound(101)).thenReturn("yyy!");
+
+        String actual = bearService.say("B");
+        assertEquals("yyy!", actual);
+
+        verify(bearRepository,times(1)).sound(101);
+    }
+
+    @Test
+    public void testItShoudReturnSayFromBearOtherTypes(){
+        String actual = bearService.say("X");
+        assertEquals("Ops!", actual);
     }
 }
