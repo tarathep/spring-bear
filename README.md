@@ -50,6 +50,7 @@ mvn spring-boot:run
 Example application
 
 http://localhost:8080/bear/says?type=A
+
 http://localhost:8080/bear/says?type=B
 
 ![](./media/example-app.png)
