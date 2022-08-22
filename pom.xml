@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.tarathep</groupId>
 	<artifactId>spring-bear</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>${env.APP_VERSION}</version>
 	<name>spring-bear</name>
 	<description>Demo project for Spring Boot and support Azure Spring Cloud</description>
 	<properties>
