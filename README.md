@@ -98,8 +98,38 @@ The following procedure creates an instance of Azure Spring Apps using the Azure
 
     ![](https://docs.microsoft.com/en-us/azure/spring-apps/media/quickstart/spring-apps-create.png#lightbox)
 
-
 ### Build and deploy the app
+
+Version for build inject via env variable inside pom.xml
+
+```xml
+<version>${env.APP_VERSION}</version>
+```
+
+Windows using powershell for set  
+
+```ps
+$env:APP_VERSION=1.0.0
+```
+
+get ENV
+
+```ps
+$env:APP_VERSION
+```
+
+Linux or MacOS using terminal for set
+
+```bash
+export APP_VERSION=1.0.0
+```
+
+get
+
+```bash
+echo APP_VERSION
+```
+
 
 build jar with skip unitest testing
 
